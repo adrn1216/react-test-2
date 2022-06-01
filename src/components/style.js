@@ -9,6 +9,9 @@ export const StyledTodoList = styled.div`
     transition: 0.3s;
     display: flex;
     justify-content: space-between;
+    span {
+      word-break: break-all;
+    }
   }
   .todo {
     :hover {
@@ -44,7 +47,18 @@ export const StyledButton = styled.button`
 
 export const StyledNewTodo = styled.div`
   display: flex;
+  border-top: 1px solid #dbe9fd;
   padding: 15px;
   margin: 10px 0;
   align-items: center;
+  > input {
+    outline: 0;
+    height: 100%;
+    border: 0;
+    flex-grow: 1;
+    font-size: 16px;
+  }
+  > button {
+    cursor: pointer;
+  }
 `;
