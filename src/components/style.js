@@ -1,6 +1,29 @@
 import styled from "styled-components";
 
-export const StyledTodoList = styled.div``;
+export const StyledTodoList = styled.div`
+  cursor: pointer;
+  > div {
+    border: 1px solid #dbe9fd;
+    padding: 15px;
+    margin: 10px 0;
+    transition: 0.3s;
+    display: flex;
+    justify-content: space-between;
+  }
+  .todo {
+    :hover {
+      box-shadow: 0 0 5px 1px #dbe9fd;
+      transition: 0.3s;
+    }
+    :active {
+      background-color: #dbe9fd;
+    }
+  }
+  .done {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+`;
 
 export const StyledButton = styled.button`
   outline: 0;

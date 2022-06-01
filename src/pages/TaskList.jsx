@@ -17,6 +17,15 @@ const TaskList = () => {
   ]);
   const [todo, setTodo] = useState("");
 
+  const onItemClick = (index) => {
+    let tempTasks = [...tasks];
+    tempTasks[index] = {
+      text: tasks[index].text,
+      done: true,
+    };
+    setTasks(tempTasks);
+  };
+
   const addTodo = (text) => {
     let newTask = { text: text, done: false };
     setTasks([...tasks, newTask]);
@@ -24,7 +33,7 @@ const TaskList = () => {
 
   return (
     <StyledPage>
-      <TodoList items={tasks} />
+      <TodoList items={tasks} onItemClick={onItemClick} />
       <div>
         <input
           type="text"
