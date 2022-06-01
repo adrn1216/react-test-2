@@ -1,7 +1,12 @@
 import "./App.css";
+import TaskList from "./pages/TaskList";
 
 function App() {
-  return <div className="App">Todo List</div>;
+  return (
+    <div className="App">
+      <TaskList />
+    </div>
+  );
 }
 
 export default App;
