@@ -41,3 +41,10 @@ export const StyledButton = styled.button`
     background-color: ${(props) => (props.disabled ? "#dbe9fd" : "#0243eb")};
   }
 `;
+
+export const StyledNewTodo = styled.div`
+  display: flex;
+  padding: 15px;
+  margin: 10px 0;
+  align-items: center;
+`;

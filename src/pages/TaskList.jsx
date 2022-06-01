@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
+import NewTodo from "../components/NewTodo";
 import TodoList from "../components/TodoList";
-import Button from "../components/Button";
 import { StyledPage } from "./style";
 
 const TaskList = () => {
@@ -15,7 +15,6 @@ const TaskList = () => {
       done: false,
     },
   ]);
-  const [todo, setTodo] = useState("");
 
   const onItemClick = (index) => {
     let tempTasks = [...tasks];
@@ -34,16 +33,7 @@ const TaskList = () => {
   return (
     <StyledPage>
       <TodoList items={tasks} onItemClick={onItemClick} />
-      <div>
-        <input
-          type="text"
-          value={todo}
-          onChange={(e) => setTodo(e.target.value)}
-        />
-        <Button onClick={() => addTodo(todo)} disabled={!todo}>
-          add
-        </Button>
-      </div>
+      <NewTodo addTodo={addTodo} />
     </StyledPage>
   );
 };
