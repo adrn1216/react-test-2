@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import TodoList from "../components/TodoList";
+import Button from "../components/Button";
 import { StyledPage } from "./style";
 
 const TaskList = () => {
@@ -30,7 +31,9 @@ const TaskList = () => {
           value={todo}
           onChange={(e) => setTodo(e.target.value)}
         />
-        <button onClick={() => addTodo(todo)}>Add</button>
+        <Button onClick={() => addTodo(todo)} disabled={!todo}>
+          add
+        </Button>
       </div>
     </StyledPage>
   );
