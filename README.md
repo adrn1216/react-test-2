@@ -1,3 +1,5 @@
+<img width="1680" alt="image" src="https://github.com/adrn1216/react-test-2/assets/54650462/124277f4-67a1-4d2c-a2fd-0f40e07494df">
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
